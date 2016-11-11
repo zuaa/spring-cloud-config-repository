@@ -1,5 +1,7 @@
 scenario NewConfigurationRepo should create a new project based on this archive
 
+let project_name = "mynewproject"
+
 given
   ArchiveRoot
 

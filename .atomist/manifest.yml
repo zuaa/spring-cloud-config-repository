@@ -1,6 +1,6 @@
 group: atomist-project-templates
 artifact: config-repo
-version: "0.1.0"
+version: "0.1.1"
 
 requires: "1.2.0-20161104135249"
 

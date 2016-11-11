@@ -20,4 +20,9 @@ editor NewConfigurationRepo
 
 uses atomist-project-templates.common-editors.RemoveApacheSoftwareLicense20
 
+@maxLength 21
+@description "Name of your new project."
+@displayName "Project Name"
+param project_name: @project_name
+
 RemoveApacheSoftwareLicense20
