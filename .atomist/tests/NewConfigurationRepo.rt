@@ -1,0 +1,12 @@
+scenario NewConfigurationRepo should create a new project based on this archive
+
+given
+  ArchiveRoot
+
+when
+  NewConfigurationRepo
+
+then
+  fileExists "configuredmicroservice1.properties"
+  and fileExists "configuredmicroservice1-dev.properties"
+  and { !result.fileExists("LICENSE") }
