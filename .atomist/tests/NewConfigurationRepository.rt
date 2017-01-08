@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 the original author or authors.
+ * Copyright © 2016 Atomist, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-scenario NewConfigurationRepo should create a new project based on this archive
+
+scenario NewConfigurationRepository should create a new project based on this archive
 
 let project_name = "mynewproject"
 let description = "My Project Description"
@@ -22,13 +23,13 @@ given
   ArchiveRoot
 
 when
-  NewConfigurationRepo
+  NewConfigurationRepository
 
 then
   fileExists "configuredmicroservice1.properties"
-  and fileExists "configuredmicroservice1-dev.properties"
-  and { !result.fileExists("LICENSE") }
-  and fileExists "README.md"
-  and fileContains "README.md" description
-  and fileContains "README.md" project_name
-  and { return !result.fileContains("README.md", "{{creation_date}}") }
+    and fileExists "configuredmicroservice1-dev.properties"
+    and { !result.fileExists("LICENSE") }
+    and fileExists "README.md"
+    and fileContains "README.md" description
+    and fileContains "README.md" project_name
+    and { return !result.fileContains("README.md", "{{creation_date}}") }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 the original author or authors.
+ * Copyright © 2016 Atomist, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,12 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@tag "spring-cloud"
-@description "Creates a new Configuration Repository project, typically to be used by a Spring Cloud Config Server"
-@generator
-editor NewConfigurationRepo
 
-uses atomist-project-templates.common-editors.RemoveApacheSoftwareLicense20
+@description "creates a new Configuration Repository project, typically to be used by a Spring Cloud Config Server"
+@tag "spring-cloud"
+@generator
+editor NewConfigurationRepository
+
+uses atomist-rugs.common-editors.RemoveApacheSoftwareLicense20
+uses atomist-rugs.common-editors.RemoveChangeLog
+uses atomist-rugs.common-editors.RemoveCodeOfConduct
 
 @maxLength 21
 @description "Name of your new project."
@@ -28,17 +31,19 @@ param project_name: @project_name
 @maxLength 90
 @description "Description of the new project"
 @displayName "description"
-param description: .*
+param description: @any
 
-with project
+with Project
   do merge "readme.vm" "README.md"
 
-RemoveApacheSoftwareLicense20
 AddCreationDateToReadme
+RemoveApacheSoftwareLicense20
+RemoveChangeLog
+RemoveCodeOfConduct
 
 
 @description "Adds a creation date to the README.md"
 editor AddCreationDateToReadme
 
-with file f when path = "README.md"
+with File when path = "README.md"
   do replace "{{creation_date}}" { new Date().toISOString().split('T')[0] }
