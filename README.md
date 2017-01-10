@@ -1,5 +1,6 @@
 # Atomist 'spring-cloud-config-repository'
 
+[![Build Status](https://travis-ci.org/atomist-rugs/sample-config-repo.svg?branch=master)](https://travis-ci.org/atomist-rugs/sample-config-repo)
 [![Slack Status](https://join.atomist.com/badge.svg)](https://join.atomist.com)
 
 This [Rug][rug] archive contains a Generator for a [Spring Cloud Configuration Repository][spring-cloud-config] project.
