@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-scenario NewConfigurationRepository should create a new project based on this archive
+scenario NewSpringCloudConfigRepository should create a new project based on this archive
 
 let project_name = "mynewproject"
 let description = "My Project Description"
@@ -23,7 +23,7 @@ given
   ArchiveRoot
 
 when
-  NewConfigurationRepository
+  NewSpringCloudConfigRepository
 
 then
   fileExists "configuredmicroservice1.properties"

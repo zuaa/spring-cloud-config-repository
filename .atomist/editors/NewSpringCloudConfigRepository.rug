@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-@description "creates a new Configuration Repository project, typically to be used by a Spring Cloud Config Server"
+@description "creates a new Spring Cloud Configuration Repository project, typically to be used by a Spring Cloud Config Server"
 @tag "spring-cloud"
 @generator
-editor NewConfigurationRepository
+editor NewSpringCloudConfigRepository
 
 uses atomist-rugs.common-editors.RemoveApacheSoftwareLicense20
 uses atomist-rugs.common-editors.RemoveChangeLog
