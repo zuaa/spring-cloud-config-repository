@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/atomist-rugs/sample-config-repo.svg?branch=master)](https://travis-ci.org/atomist-rugs/sample-config-repo)
 [![Slack Status](https://join.atomist.com/badge.svg)](https://join.atomist.com)
 
+[<img src="http://images.atomist.com/button/create-project.png" width="267" alt="Create a project with Atomist"/>](https://api.atomist.com/v1/projects/generators/5c30ace7-3263-451b-abb7-413072209bbb)
+
 This [Rug][rug] archive contains a Generator for a [Spring Cloud Configuration Repository][spring-cloud-config] project.
 
 [rug]: http://docs.atomist.com/
